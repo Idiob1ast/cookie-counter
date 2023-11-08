@@ -1,6 +1,7 @@
 // Initiate counts
 let cookieCount = 0;
 let bakeryCount = 0;
+let cookieTimer;
 
 // Cache the elements
 const countDisplay_div = document.querySelector(".count_board");
@@ -40,6 +41,14 @@ function bakeCookie() {
   updateInventory();
 }
 
+function startCookieTimer() {
+  cookieTimer = setInterval(bakeCookie, 1000);
+}
+
+function stopCookieTimer() {
+  clearInterval(cookieTimer);
+}
+
 function getCookiesNeeded() {
   let cookiesNeeded = 10 * (bakeryCount + 1);
   cookiesNeeded_span.innerHTML = cookiesNeeded;
@@ -57,10 +66,12 @@ function add_bakery() {
       } more cookies!`;
     }
   } else {
+    stopCookieTimer();
     bakeryCount++;
     cookieCount -= cookiesNeeded;
     getCookiesNeeded();
     updateInventory();
+    startCookieTimer();
   }
 }
 
