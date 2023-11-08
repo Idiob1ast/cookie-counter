@@ -21,6 +21,9 @@ updateInventory();
 
 bakeButton.addEventListener("click", function () {
   add_cookie();
+  if (message_div.innerHTML != "") {
+    message_div.innerHTML = ""; // Clear the message if not empty
+  }
 });
 
 bakeryButton.addEventListener("click", function () {
@@ -30,13 +33,15 @@ bakeryButton.addEventListener("click", function () {
 function add_cookie() {
   cookieCount++;
   updateInventory();
-  if (message_div.innerHTML != "") {
-    message_div.innerHTML = ""; // Clear the message if not empty
-  }
+}
+
+function bakeCookie() {
+  cookieCount += bakeryCount;
+  updateInventory();
 }
 
 function getCookiesNeeded() {
-  let cookiesNeeded = 20 * (bakeryCount + 1);
+  let cookiesNeeded = 10 * (bakeryCount + 1);
   cookiesNeeded_span.innerHTML = cookiesNeeded;
   return cookiesNeeded;
 }
