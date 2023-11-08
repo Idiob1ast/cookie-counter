@@ -1,4 +1,4 @@
-// Initiate cookie count
+// Initiate counts
 let cookieCount = 0;
 let bakeryCount = 0;
 
@@ -36,7 +36,7 @@ function add_cookie() {
 }
 
 function getCookiesNeeded() {
-  let cookiesNeeded = 10 * (bakeryCount + 1);
+  let cookiesNeeded = 20 * (bakeryCount + 1);
   cookiesNeeded_span.innerHTML = cookiesNeeded;
   return cookiesNeeded;
 }
@@ -44,7 +44,13 @@ function getCookiesNeeded() {
 function add_bakery() {
   let cookiesNeeded = getCookiesNeeded();
   if (cookieCount < cookiesNeeded) {
-    message_div.innerHTML = "You need more cookies!";
+    if (cookiesNeeded - cookieCount == 1) {
+      message_div.innerHTML = `You need 1 more cookie!`;
+    } else {
+      message_div.innerHTML = `You need ${
+        cookiesNeeded - cookieCount
+      } more cookies!`;
+    }
   } else {
     bakeryCount++;
     cookieCount -= cookiesNeeded;
