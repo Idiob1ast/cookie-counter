@@ -21,6 +21,14 @@ p {
   gap: 10px;
 }
 
+.bakery_display {
+  display: none;
+}
+
+#bakery_button {
+  display: none;
+}
+
 #bake_button {
   border: 5px solid black;
   border-radius: 5px;

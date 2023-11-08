@@ -25,9 +25,15 @@ bakeButton.addEventListener("click", function () {
   if (message_div.innerHTML != "") {
     message_div.innerHTML = ""; // Clear the message if not empty
   }
+  if (bakeryCount < 1 && cookieCount >= 10) {
+    bakeryButton.style.display = "initial";
+  }
 });
 
 bakeryButton.addEventListener("click", function () {
+  if (bakeryCount < 1) {
+    bakeryDisplay_div.style.display = "initial";
+  }
   add_bakery();
 });
 
