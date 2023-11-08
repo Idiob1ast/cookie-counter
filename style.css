@@ -1,0 +1,59 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+h1 {
+  margin: 5px 0 0 0;
+}
+
+p {
+  margin: 0;
+}
+
+.count_board {
+  display: flex;
+  gap: 10px;
+}
+
+#bake_button {
+  border: 5px solid black;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 15px 0;
+  width: 120px;
+  text-align: center;
+  color: white;
+  background-color: green;
+}
+
+#bake_button:hover {
+  background-color: rgb(0, 85, 0);
+}
+
+.message > p {
+  color: red;
+  font-weight: bold;
+}
+
+#stop_button {
+  border: 5px solid black;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 15px 0;
+  width: 120px;
+  text-align: center;
+  color: white;
+  background-color: red;
+}
+
+#stop_button:hover {
+  background-color: darkred;
+}

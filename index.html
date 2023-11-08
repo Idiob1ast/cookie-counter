@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Cookies</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Cookie Counter!</h1>
+    </header>
+
+    <div class="count_board">
+      <div class="cookie_display">
+        <p>C: <span id="cookie_count">0</span></p>
+      </div>
+      <div class="bakery_display">
+        <p>B: <span id="bakery_count">0</span></p>
+      </div>
+    </div>
+
+    <div class="stage">
+      <button id="bake_button">BAKE</button>
+      <!-- <button id="stop_button">STOP</button> -->
+    </div>
+
+    <div class="upgrades">
+      <button id="bakery_button">
+        Bakery (<span id="cookies_needed">0</span>C needed)
+      </button>
+    </div>
+    <div class="message"><p></p></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
