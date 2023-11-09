@@ -21,11 +21,10 @@ p {
   gap: 10px;
 }
 
-.bakery_display {
-  display: none;
-}
-
-#bakery_button {
+.bakery_display,
+#bakery_button,
+.factory_display,
+#factory_button {
   display: none;
 }
 
