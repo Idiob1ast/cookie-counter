@@ -15,6 +15,7 @@ const upgrades_div = document.querySelector(".upgrades");
 const bakeryButton = document.getElementById("bakery_button");
 const stopButton = document.getElementById("stop_button");
 const cookiesNeeded_span = document.getElementById("cookies_needed");
+const cps_span = document.getElementById("cps");
 const message_div = document.querySelector(".message > p");
 
 getCookiesNeeded();
@@ -61,6 +62,10 @@ function getCookiesNeeded() {
   return cookiesNeeded;
 }
 
+function getCookiesPerSecond() {
+  cps_span.innerHTML = bakeryCount;
+}
+
 function add_bakery() {
   let cookiesNeeded = getCookiesNeeded();
   if (cookieCount < cookiesNeeded) {
@@ -76,6 +81,7 @@ function add_bakery() {
     bakeryCount++;
     cookieCount -= cookiesNeeded;
     getCookiesNeeded();
+    getCookiesPerSecond();
     updateInventory();
     startCookieTimer();
   }
